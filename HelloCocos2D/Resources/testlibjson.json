@@ -1,0 +1,13 @@
+{
+	"RootA" : "Value in parent node",
+	"ChildNode" : [
+		{
+			"ChildA" : "String Value c1",
+			"ChildB" : "dsf c1"
+		},
+		{
+			"ChildA" : "String Value c2",
+			"ChildB" : "dsf c2"
+		}
+	]
+}

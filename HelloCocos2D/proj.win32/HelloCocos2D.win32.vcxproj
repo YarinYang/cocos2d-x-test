@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9A51C3B3-6C79-4EB2-BE7F-9B8B8967A268}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\Classes;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external;$(SolutionDir)CocosDenshion\include;E:\microoh\cocos2d-2.1beta3-x-2.1.0\extensions;E:\microoh\cocos2d-2.1beta3-x-2.1.0\external\chipmunk\include\chipmunk;E:\microoh\cocos2d-2.1beta3-x-2.1.0\cocos2dx\platform\third_party\win32\libxml2;E:\microoh\cocos2d-2.1beta3-x-2.1.0\cocos2dx\platform\third_party\win32\iconv;E:\microoh\cocos2d-2.1beta3-x-2.1.0\cocos2dx\platform;E:\microoh\jsoncpp-src-0.5.0\include;E:\microoh\libjson;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libExtensions.lib;libcocos2d.lib;libCocosDenshion.lib;opengl32.lib;glew32.lib;libBox2d.lib;libchipmunk.lib;libxml2.lib;libiconv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>HelloCocos2D.h</HeaderFileName>
+      <InterfaceIdentifierFileName>HelloCocos2D_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>HelloCocos2D_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/HelloCocos2D.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\Classes;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external;$(SolutionDir)CocosDenshion\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGSNDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcocos2d.lib;opengl32.lib;glew32.lib;libBox2d.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>HelloCocos2D.h</HeaderFileName>
+      <InterfaceIdentifierFileName>HelloCocos2D_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>HelloCocos2D_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/HelloCocos2D.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_internalarray.inl" />
+    <None Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_internalmap.inl" />
+    <None Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_valueiterator.inl" />
+    <None Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\sconscript" />
+    <None Include="..\Resources\CloseNormal.png" />
+    <None Include="..\Resources\CloseSelected.png" />
+    <None Include="..\Resources\HelloWorld.png" />
+    <None Include="res\HelloCocos2D.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HelloCocos2D.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\autolink.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\config.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\features.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\forwards.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\json.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\reader.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\value.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\include\json\writer.h" />
+    <ClInclude Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_batchallocator.h" />
+    <ClInclude Include="..\..\..\libjson\JSONOptions.h" />
+    <ClInclude Include="..\..\..\libjson\libjson.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\internalJSONNode.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONAllocator.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONChildren.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONDebug.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONDefs.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONDefs\GNU_C.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONDefs\Strings_Defs.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONDefs\Unknown_C.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONDefs\Visual_C.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONGlobals.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONMemory.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONMemoryPool.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONNode.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONPreparse.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONSharedString.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONSingleton.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONStats.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONStream.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONValidator.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSONWorker.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\JSON_Base64.h" />
+    <ClInclude Include="..\..\..\libjson\_internal\Source\NumberToString.h" />
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\crypto\base64\libb64.h" />
+    <ClInclude Include="..\Classes\crypto\CCCrypto.h" />
+    <ClInclude Include="..\Classes\crypto\md5\md5.h" />
+    <ClInclude Include="..\Classes\crypto\sha1\sha1.h" />
+    <ClInclude Include="..\Classes\GB2ShapeCache-x.h" />
+    <ClInclude Include="..\Classes\GLES-Render.h" />
+    <ClInclude Include="..\Classes\HelloBox2D.h" />
+    <ClInclude Include="..\Classes\HelloChipmunk.h" />
+    <ClInclude Include="..\Classes\HelloCocos2D.h" />
+    <ClInclude Include="..\Classes\HelloMap.h" />
+    <ClInclude Include="..\Classes\HelloMusic.h" />
+    <ClInclude Include="..\Classes\HelloPhysicsEditor.h" />
+    <ClInclude Include="..\Classes\HelloUI.h" />
+    <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\tinystr.h" />
+    <ClInclude Include="..\Classes\tinyxml.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_reader.cpp" />
+    <ClCompile Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_value.cpp" />
+    <ClCompile Include="..\..\..\jsoncpp-src-0.5.0\src\lib_json\json_writer.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\internalJSONNode.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONAllocator.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONChildren.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONDebug.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONIterators.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONMemory.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONNode.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONNode_Mutex.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONPreparse.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONStream.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONValidator.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONWorker.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\JSONWriter.cpp" />
+    <ClCompile Include="..\..\..\libjson\_internal\Source\libjson.cpp" />
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\crypto\base64\libb64.c" />
+    <ClCompile Include="..\Classes\crypto\CCCrypto.cpp" />
+    <ClCompile Include="..\Classes\crypto\md5\md5.c" />
+    <ClCompile Include="..\Classes\crypto\sha1\sha1.cpp" />
+    <ClCompile Include="..\Classes\GB2ShapeCache-x.cpp" />
+    <ClCompile Include="..\Classes\GLES-Render.cpp" />
+    <ClCompile Include="..\Classes\HelloBox2D.cpp" />
+    <ClCompile Include="..\Classes\HelloChipmunk.cpp" />
+    <ClCompile Include="..\Classes\HelloCocos2D.cpp" />
+    <ClCompile Include="..\Classes\HelloMap.cpp" />
+    <ClCompile Include="..\Classes\HelloMusic.cpp" />
+    <ClCompile Include="..\Classes\HelloPhysicsEditor.cpp" />
+    <ClCompile Include="..\Classes\HelloUI.cpp" />
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\tinystr.cpp" />
+    <ClCompile Include="..\Classes\tinyxml.cpp" />
+    <ClCompile Include="..\Classes\tinyxmlerror.cpp" />
+    <ClCompile Include="..\Classes\tinyxmlparser.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
